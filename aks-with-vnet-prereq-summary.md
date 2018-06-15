@@ -8,7 +8,7 @@
 ![alt text](images/aks-vnet-portal.png "Azure Portal - AKS Networking Blade")
 
 5.  Follow the prompts on the remaining Blades, it's encouraged to enable the **Health/Monitoring and Logging** to ensure all AKS Telemetry is available for your Operations and Development teams.  A **Log Analytics workspace** is required, which will be created by default or can be pre-created.  
-6.  Once your AKS Cluster has been successfully deployed, review the documentation on creating an Internal Loadbalancer to expose Kubernetes Services on the defined Vnet - https://docs.microsoft.com/en-us/azure/aks/internal-lb.  Additional resources for Ingress/TLS, Egress Traffic, and HTTP Application Routing are available and should be reviewed depending on Network Routing requirements:
+6.  Once your AKS Cluster has been successfully deployed, review the documentation on creating an Internal Loadbalancer to expose Kubernetes Services on the defined Vnet - https://docs.microsoft.com/en-us/azure/aks/internal-lb.  Additional resources for **Ingress/TLS, Egress Traffic, and HTTP Application Routing** are available and should be reviewed depending on Network Routing requirements:
 
 https://docs.microsoft.com/en-us/azure/aks/ingress
 
