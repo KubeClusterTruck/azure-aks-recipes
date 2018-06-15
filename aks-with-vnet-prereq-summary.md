@@ -5,3 +5,12 @@
 3. The AKS Cluster is now ready to be created using Advance Networking, it recommended using the Azure Portal the 1st time in your environment.  Again, make sure the **Service Principal** created in Step 1 has **Contributor** permissions in the target Resource Group.  Follow the prompts in the Azure AKS Create Blade(s) in the Azure Portal.  Use the defined Service Principal on the 1st Blade, and fill in the Vnet/Subnet information on the 2nd/Networking Blade.  An example is shown below, it is recommended that a different SubNet IP range be used for the **Kubernetes Service/Service DNS** specification (e.g. if Vnet/Subnet is 10.x.x.x use 172.x.x.x).  Use the default for the **Docker Bridge** definition unless your Azure Admin/Networking team has identified any potential conflicts with the AKS & Kubernetes Service Subnets.
 
 ![alt text](images/aks-vnet-portal.png "Azure Portal - AKS Networking Blade")
+
+4.  Follow the prompts on the remaining Blades, it's encouraged to enable the **Health/Monitoring and Logging** to ensure all AKS Telemetry is available for your Operations and Development teams.  A **Log Analytics workspace** is required, which will be created by default or can be pre-created.  
+5.  Once your AKS Cluster has been successfully deployed, review the documentation on creating an Internal Loadbalancer to expose Kubernetes Services on the defined Vnet - https://docs.microsoft.com/en-us/azure/aks/internal-lb.  Additional resources for Ingress/TLS, Egress Traffic, and HTTP Application Routing are available and should be reviewed depending on Network Routing requirements:
+
+https://docs.microsoft.com/en-us/azure/aks/ingress
+
+https://docs.microsoft.com/en-us/azure/aks/egress
+
+https://docs.microsoft.com/en-us/azure/aks/http-application-routing
